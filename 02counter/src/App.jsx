@@ -9,7 +9,17 @@ function App() {
 
   const addValue = () => {
     if (counter < 20) {
-      setCounter(counter + 1)
+      //in usestate it changes the variable in batches as it all have the same thing so only one time updation
+      // -> this will update only once
+      // setCounter(counter + 1)
+      // setCounter(counter + 1)
+      // setCounter(counter + 1)
+      // setCounter(counter + 1)
+      // if you have to do like this then use the call back inside it
+      setCounter(counter => counter + 1)
+      setCounter(counter => counter + 1)
+      setCounter(counter => counter + 1)
+      setCounter(counter => counter + 1)
     }
     // counter += 1
     
